@@ -1,12 +1,29 @@
-# R/fetch_anm_data.R
+# R/anmData.R
 
 #' Fetch ANM Data
 #'
 #' This function fetches data from the ANM open data portal.
 #'
-#' @param endpoint The API endpoint to fetch data from.
+#' @param code A character vector with the series code.
 #' @return A data frame containing the requested data.
 #' @export
+
+anmData <- function(code) {
+
+  url <- "https://app.anm.gov.br/DadosAbertos/"
+  read.table(
+    file = paste0(url, code),
+    header = TRUE,
+    sep = ",",
+    fill = TRUE,
+    stringsAsFactors = FALSE,
+    fileEncoding = "Latin1",
+    quote = "\""
+  )
+
+}
+
+
 # fetch_anm_data <- function(endpoint) {
 #   base_url <- "https://dados.gov.br/dataset/anm-dados-abertos"
 #   url <- paste0(base_url, endpoint)
@@ -20,26 +37,6 @@
 #     stop("Failed to fetch data from ANM. Status code: ", response$status_code)
 #   }
 # }
-
-
-
-fetch_anm_data <- function(tema, endpoint) {
-
-  url <- "https://app.anm.gov.br/DadosAbertos/"
-  read.table(
-    file = paste0(url, tema,  "/", endpoint),
-    header = TRUE,
-    sep = ",",
-    fill = TRUE,
-    stringsAsFactors = FALSE,
-    fileEncoding = "Latin1",
-    quote = "\""
-  )
-
-}
-
-
-
 
 
 

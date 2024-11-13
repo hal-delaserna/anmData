@@ -4,10 +4,10 @@
 \alias{anmData}
 \title{Fetch ANM Data}
 \usage{
-anmData(tema, endpoint)
+anmData(code)
 }
 \arguments{
-\item{endpoint}{The API endpoint to fetch data from.}
+\item{code}{A character vector with the series code.}
 }
 \value{
 A data frame containing the requested data.
