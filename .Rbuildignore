@@ -1,3 +1,7 @@
 ^anmData\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^\\.git$
+^doc_temp/
+^\\.gitignore$
+^\\.Rhistory$
