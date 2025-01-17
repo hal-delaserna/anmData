@@ -3,13 +3,9 @@ Type: Package
 Title: Import ANM Data
 Version: 0.1.0
 Authors@R: person("Humberto Almeida de la Serna", email = "humberto.LaSerna@gmail.com", role = c("aut", "cre"))
-Description: A package to import data from ANM (Agência Nacional de Mineração) open data portal.
+Description: A package to import data from Brazilian Governamental Mining Agency (ANM - Agencia Nacional de Mineracao).
 Depends: R (>= 3.5.0)
-Imports:
-    httr,
-    jsonlite,
-    dplyr
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

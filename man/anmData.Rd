@@ -2,7 +2,7 @@
 % Please edit documentation in R/anmData.R
 \name{anmData}
 \alias{anmData}
-\title{Fetch ANM Data}
+\title{anmData}
 \usage{
 anmData(code)
 }
