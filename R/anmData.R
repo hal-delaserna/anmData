@@ -32,7 +32,9 @@ anmData <- function(code) {
         fill = TRUE,
         stringsAsFactors = FALSE,
         fileEncoding = "Latin1",
-        quote = "\""
+        quote = "\"",
+        check.names = FALSE,
+        dec = ","
       )
       return(data)
     },

@@ -1,0 +1,1 @@
+Arquivo  "/ARRECADACAO/CFEM_Autuacao.csv" é separado por ";"
