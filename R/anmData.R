@@ -18,14 +18,22 @@ anmData <- function(code) {
   }
 
 
+
+
+
   url_base <- "https://app.anm.gov.br/DadosAbertos"
   path <- anm_paths[code, 1]
   url <- paste0(url_base, path, ".csv")
 
+  temp_file <- tempfile(fileext = ".csv")
 
-  tryCatch(
-    {
-      data <- read.table(
+
+  tryCatch({
+
+    download.file(url = url, destfile = temp_file, mode = "wb")
+
+      data <-
+        read.table(
         file = url,
         header = TRUE,
         sep = ",",
